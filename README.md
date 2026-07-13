@@ -4,7 +4,7 @@ An enterprise-ready, full-stack asset tracking and lending catalog system built 
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 *   **Feature-Complete CRUD**: Add, read, update, checkout, checkin, and delete assets dynamically.
 *   **JSON Persistence Layer**: Uses a server-side JSON file (`src/data/tools.json`) acting as a local database, maintaining state across restarts and browser reloads.
@@ -17,7 +17,7 @@ An enterprise-ready, full-stack asset tracking and lending catalog system built 
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 *   **Framework**: Next.js 16 (App Router)
 *   **Language**: JavaScript / React 19 (Client Components)
@@ -27,7 +27,7 @@ An enterprise-ready, full-stack asset tracking and lending catalog system built 
 
 ---
 
-## 💻 Getting Started
+## Getting Started
 
 ### Prerequisites
 Make sure you have [Node.js](https://nodejs.org) (v18+) installed.
@@ -55,7 +55,7 @@ npm run lint
 
 ---
 
-## 📂 Project Architecture
+## Project Architecture
 
 ```
 ├── src
