@@ -1,0 +1,62 @@
+[
+  {
+    "id": "3",
+    "name": "Estwing 16 oz Claw Hammer",
+    "category": "Hand Tools",
+    "serialNumber": "TL-30012",
+    "description": "Solid steel claw hammer with shock reduction grip.",
+    "status": "Available",
+    "borrowerName": null,
+    "dueDate": null,
+    "lastUpdated": "2026-07-13T19:52:57.858Z",
+    "updatedBy": "Manager"
+  },
+  {
+    "id": "4",
+    "name": "Makita Circular Saw 7-12F ; 4 Inch",
+    "category": "Power Tools",
+    "serialNumber": "TL-10088",
+    "description": "Powerful motor with heavy gauge aluminum wraparound base.",
+    "status": "Available",
+    "borrowerName": null,
+    "dueDate": null,
+    "lastUpdated": "2026-07-13T18:37:03.882Z",
+    "updatedBy": "Manager"
+  },
+  {
+    "id": "5",
+    "name": "3M Professional Safety Glasses",
+    "category": "Safety Equipment",
+    "serialNumber": "TL-40003",
+    "description": "Anti-fog, high-impact polycarbonate lenses.",
+    "status": "Available",
+    "borrowerName": null,
+    "dueDate": null,
+    "lastUpdated": "2026-07-13T18:26:11.018Z",
+    "updatedBy": "Manager"
+  },
+  {
+    "id": "vrxmhf9",
+    "name": "Crowbar 850",
+    "category": "Safety Equipment",
+    "serialNumber": "TL-11111",
+    "description": "Heavy Metal Crowbar",
+    "status": "Under Maintenance",
+    "borrowerName": null,
+    "dueDate": null,
+    "lastUpdated": "2026-07-13T18:40:04.582Z",
+    "updatedBy": "Manager"
+  },
+  {
+    "id": "mock-xss-test",
+    "name": "XSS Test Screwdriver <script>alert('XSS-Name')</script>",
+    "category": "Hand Tools",
+    "serialNumber": "TL-99999",
+    "description": "Mock tool containing unsafe HTML tags: <img src=x onerror=alert('XSS-Desc')>",
+    "status": "Available",
+    "borrowerName": null,
+    "dueDate": null,
+    "lastUpdated": "2026-07-14T00:34:26.000Z",
+    "updatedBy": "Manager"
+  }
+]
