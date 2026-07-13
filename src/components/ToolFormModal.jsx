@@ -168,7 +168,6 @@ export default function ToolFormModal({
   return (
     <div 
       className="fixed inset-0 bg-black/50 backdrop-blur-xs flex items-center justify-center z-50 p-4" 
-      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
       role="presentation"
     >
       <div

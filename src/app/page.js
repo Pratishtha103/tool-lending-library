@@ -353,7 +353,7 @@ export default function LibraryDashboard() {
 
       {/* Delete Confirmation Modal (Enterprise level validation flow) */}
       {activeModal === "delete_confirm" && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-xs flex items-center justify-center z-50 p-4" onClick={() => { setActiveModal(null); setSelectedTool(null); }} role="presentation">
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-xs flex items-center justify-center z-50 p-4" role="presentation">
           <div className="bg-(--bg-primary) border border-(--border-light) rounded-md max-w-125 w-full p-6 relative shadow-lg transition-all duration-150" role="dialog" aria-modal="true" aria-labelledby="delete-modal-title">
             <div className="flex items-center gap-2.5 mb-3 text-red-800 dark:text-red-400">
               <AlertTriangle className="w-5 h-5 shrink-0" />
