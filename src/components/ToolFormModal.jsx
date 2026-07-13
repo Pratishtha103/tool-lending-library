@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 export default function ToolFormModal({
   mode, // "create" | "edit" | "checkout"
   tool, // tool object (for edit and checkout modes)
+  tools = [], // all tools list for duplicate check
   onClose,
   onSubmit
 }) {
@@ -119,11 +120,20 @@ export default function ToolFormModal({
         newErrors.name = "Tool name is required.";
       }
       
-      const serialPattern = /^TL-\d{5}$/;
+      const serialPattern = /^TL-\d{5}$/i;
       if (!formData.serialNumber.trim()) {
         newErrors.serialNumber = "Serial number is required.";
       } else if (!serialPattern.test(formData.serialNumber.trim())) {
         newErrors.serialNumber = "Serial number must match format TL-XXXXX (e.g., TL-12345).";
+      } else {
+        // Local duplicate check
+        const serialUpper = formData.serialNumber.trim().toUpperCase();
+        const isDuplicate = tools.some(
+          (t) => t.serialNumber.toUpperCase() === serialUpper && t.id !== tool?.id
+        );
+        if (isDuplicate) {
+          newErrors.serialNumber = "This serial number is already registered in the library.";
+        }
       }
 
       if (formData.status === "Loaned") {

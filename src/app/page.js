@@ -95,9 +95,11 @@ export default function LibraryDashboard() {
 
   // Create or Update Form submit handler
   const handleFormSubmit = async (formData) => {
-    setIsLoading(true);
     const isEditing = activeModal === "edit";
     const method = isEditing ? "PUT" : "POST";
+    setActiveModal(null); // Close modal immediately
+    setSelectedTool(null);
+    setIsLoading(true);
     
     try {
       const response = await fetch(`/api/tools?latency=${latencyMode}`, {
@@ -127,8 +129,6 @@ export default function LibraryDashboard() {
         "success"
       );
       
-      setActiveModal(null);
-      setSelectedTool(null);
       await fetchTools(); // Reload lists
     } catch (err) {
       showToast(err.message, "error");
@@ -138,6 +138,8 @@ export default function LibraryDashboard() {
 
   // Checkout Form submit handler
   const handleCheckoutSubmit = async (formData) => {
+    setActiveModal(null); // Close modal immediately
+    setSelectedTool(null);
     setIsLoading(true);
     try {
       const response = await fetch(`/api/tools?latency=${latencyMode}`, {
@@ -162,8 +164,6 @@ export default function LibraryDashboard() {
       showToast(`Asset checked out to ${formData.borrowerName} successfully.`, "success");
       console.log(`[Analytics] User interacted with Feature Complete CRUD - CHECKOUT - Operator: ${userRole}`);
       
-      setActiveModal(null);
-      setSelectedTool(null);
       await fetchTools();
     } catch (err) {
       showToast(err.message, "error");
@@ -343,6 +343,7 @@ export default function LibraryDashboard() {
         <ToolFormModal
           mode={activeModal}
           tool={selectedTool}
+          tools={tools}
           onClose={() => {
             setActiveModal(null);
             setSelectedTool(null);
